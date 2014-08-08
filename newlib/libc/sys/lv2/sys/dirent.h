@@ -5,6 +5,10 @@
 #include <unistd.h>
 #include <sys/types.h>
 
+#ifndef MAXPATHLEN
+#include <sys/param.h>
+#endif
+
 #define DT_INVALID			0xff
 #define DT_UNKNOWN			0
 #define DT_FIFO				DT_INVALID
