@@ -236,6 +236,11 @@
 #define _REENT_GLOBAL_ATEXIT
 #endif
 
+#if defined(__PPU__) || defined(__lv2ppu__)
+/* we want the reentrancy structure to be returned by a function */
+#define __DYNAMIC_REENT__
+#endif
+
 #ifndef __EXPORT
 #define __EXPORT
 #endif
